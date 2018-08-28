@@ -17,7 +17,7 @@ public class GenericsUtil {
      * @return
      */
     public static String[] getFields(Context ctx) {
-        Class rStringClass = resolveRClass(ctx.getPackageName());
+        Class rStringClass = resolveRClass(ctx.getClass().getName());
         if (rStringClass != null) {
             return Libs.toStringArray(rStringClass.getFields());
         }
